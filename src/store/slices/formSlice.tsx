@@ -12,8 +12,7 @@ export const formSlice = createSlice({
     },
     addNewDataObject(state, action) {
         if(action?.payload){
-            debugger;
-            const index = parseInt(localStorage.getItem('index') as string) || -1;
+            const index = localStorage.getItem('index') || 0;
             const newArr = JSON.parse(JSON.stringify(state));
             newArr[index] = action?.payload;
             localStorage.removeItem("index");

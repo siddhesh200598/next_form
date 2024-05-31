@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <main
-      className={`flex h-screen flex-col items-center pt-20 pb-20 pl-10 pr-10`}
+      className={`flex bg-[grey] h-screen flex-col items-center pt-20 pb-20 pl-10 pr-10`}
     >
       <Button onclickBtn={onClickToOpenModal} />
       {modalBehaviour &&
