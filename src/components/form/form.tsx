@@ -36,22 +36,22 @@ export default function Form(props: FormProps) {
         <div className='w-full p-5 rounded-[7px] bg-white'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='mb-2 mt-5'>
-                    <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+                    <label htmlFor="first_name" className="block mb-2 text-sm font-medium text-black dark:text-white">First name</label>
                     <input type="text" id="first_name" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder="First name" {...register("firstName", { required: true, maxLength: 40, min: 1 })} />
                     {errors.firstName && <p className="text-red-500">Please enter a first name</p>}
                 </div>
                 <div className='mb-2'>
-                    <label htmlFor="last_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+                    <label htmlFor="last_name" className="block mb-2 text-sm font-medium text-black dark:text-white">Last name</label>
                     <input type="text" id="last_name" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder="Last name" {...register("lastName", { required: true, maxLength: 40, min: 1 })} />
                     {errors.lastName && <p className="text-red-500">Please enter a last name</p>}
                 </div>
                 <div className='mb-2'>
-                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-black dark:text-white">Email</label>
                     <input type="text" id="email" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder="Email" {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i })} />
                     {errors.email && <p className="text-red-500">Please enter a valid email</p>}
                 </div>
                 <div className='mb-2'>
-                    <label htmlFor="mobile_number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile number</label>
+                    <label htmlFor="mobile_number" className="block mb-2 text-sm font-medium text-black dark:text-white">Mobile number</label>
                     <input type="tel" maxLength={10} id="mobile_number" className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' placeholder="Mobile number" {...register("mobileNumber", { required: true, minLength: 10, maxLength: 10, pattern: /^[0-9]*$/i })} />
                     {errors.mobileNumber && <p className="text-red-500">Please enter a mobile number</p>}
                 </div>
